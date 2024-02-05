@@ -2,8 +2,9 @@
 
 body {
     font-family: 'Cabin';
-    background-color: #758190;
+    background-color: #5e88bb;
 }
+
 
 #tentacles {
     width: 50px;
@@ -21,6 +22,14 @@ body {
 
 .stats-container {
     display: flex;
+    align-items: center;
+    transition:0.3s;
+}
+.stats-container:hover{
+    cursor: pointer;
+    animation-name: pulse;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
 }
 
 .stats-card {
@@ -30,6 +39,15 @@ body {
     margin: 1%;
     width: 100%;
     text-align: center;
+    transition: 0.3s;
+}
+.stats-card:hover{
+    cursor: pointer;
+    background:lightblue;
+    color:black;
+    animation-name: pulse;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
 }
 
 #num-contributions, #total-raised, #num-games {
@@ -55,11 +73,17 @@ body {
     width: 300px;
     text-align: center;
     border-radius: 7px;
+    transition: 0.3s;
 }
 
 .game-card:hover {
+    width:20vw;
     cursor: pointer;
-    box-shadow: 0 0 30px lightblue;
+    background:black;
+    color:white;
+    animation: pulse;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
 }
 
 #button-container {
@@ -72,4 +96,26 @@ button {
     padding: 1%;
     margin: 1%;
     border-radius: 7px;
+    transition: 0.3s;
+    
+}
+
+button:hover{
+    cursor: pointer;
+    background: black;
+    color:white;
+    animation-name: pulse;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+
+}
+
+@keyframes pulse{
+    0%{
+        box-shadow: 0 0 0 lightblue;
+        
+    }
+    50%{
+        box-shadow: 0 0px 40px lightblue;
+    }
 }
